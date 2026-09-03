@@ -1,1 +1,161 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BA Cyber Spartans | Elite OCR Team</title>
 
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Staatliches&display=swap" rel="stylesheet">
+
+    <!-- Open Graph & Social Cards -->
+    <meta property="og:title" content="BA Cyber Spartans | Elite OCR Team">
+    <meta property="og:image" content="images/logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <style>
+        body { 
+            font-family: 'Inter', sans-serif; 
+        }
+        .heading-font { 
+            font-family: 'Staatliches', cursive; 
+        }
+        .hero-bg { 
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), 
+                        url('images/hero-bg.jpg') center/cover no-repeat; 
+        }
+        .meetup-bg { 
+            background: linear-gradient(rgba(10,10,10,0.5), rgba(10,10,10,0.8)), 
+                        url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&q=80') center/cover no-repeat fixed; 
+        }
+    </style>
+</head>
+<body class="bg-zinc-950 text-gray-200 overflow-x-hidden">
+
+    <!-- Overlay -->
+    <div id="menu-overlay" 
+         onclick="toggleMenu()" 
+         class="fixed inset-0 bg-black/60 z-[54] opacity-0 pointer-events-none transition-opacity duration-300">
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="fixed top-0 left-0 w-full z-50 p-6 flex justify-between items-center bg-black/20 backdrop-blur-sm">
+        <button onclick="toggleMenu()" aria-label="Toggle Menu" class="group flex flex-col gap-1.5 z-[60] bg-black/40 p-2 rounded-sm focus:outline-none">
+            <span class="w-8 h-1 bg-white group-hover:bg-red-600 transition-colors"></span>
+            <span class="w-8 h-1 bg-white group-hover:bg-red-600 transition-colors"></span>
+            <span class="w-8 h-1 bg-white group-hover:bg-red-600 transition-colors"></span>
+        </button>
+        <a href="index.html" aria-label="Home">
+            <img src="images/logo.png" alt="BA Cyber Spartans Logo" class="h-12 w-auto hover:opacity-80 transition-opacity">
+        </a>
+    </header>
+
+    <!-- Side Menu -->
+    <nav id="side-menu" class="fixed top-0 left-0 h-full w-full md:w-80 bg-zinc-950 z-[55] flex flex-col p-12 shadow-2xl border-r border-red-600 -translate-x-full transition-transform duration-300 ease-in-out">
+        <div class="mt-20 space-y-6 uppercase italic font-bold">
+            <a href="index.html" onclick="toggleMenu()" class="heading-font text-4xl block text-red-600">Home</a>
+            <a href="events.html" class="heading-font text-4xl block text-white hover:text-red-600 transition-colors">Events</a>
+            <a href="blog.html" class="heading-font text-4xl block text-white hover:text-red-600 transition-colors">Blog</a>
+            <a href="news.html" class="heading-font text-4xl block text-white hover:text-red-600 transition-colors">News</a>
+            <a href="gallery.html" class="heading-font text-4xl block text-white hover:text-red-600 transition-colors">Photo Wall</a>
+            <a href="mascot.html" class="heading-font text-4xl block text-white hover:text-red-600 transition-colors">Mascot Profile</a>
+            <a href="signup.html" class="heading-font text-4xl block text-white hover:text-red-600 transition-colors">Sign Up</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero-bg min-h-screen flex flex-col items-center justify-center text-center px-6">
+        <h1 class="heading-font text-6xl md:text-9xl uppercase mb-2 text-white leading-none">
+            Bay Area <br><span class="text-red-600">Cyber Spartans</span>
+        </h1>
+        <p class="text-lg md:text-xl font-bold tracking-[0.4em] uppercase mb-10 text-gray-400">Elite Performance Crew</p>
+        
+        <div class="flex flex-col md:flex-row flex-wrap justify-center gap-4 max-w-5xl">
+            <a href="events.html" class="bg-red-600 text-white font-black py-4 px-12 uppercase italic text-xl hover:bg-white hover:text-black transition-all">View Events</a>
+            <a href="gallery.html" class="border-2 border-white text-white font-black py-4 px-12 uppercase italic text-xl hover:bg-white hover:text-black transition-all">Photo Wall</a>
+            <a href="signup.html" class="bg-red-600 text-white font-black py-4 px-12 uppercase italic text-xl hover:bg-white hover:text-black transition-all">Join The Crew</a>
+        </div>
+    </section>
+
+    <!-- Mission -->
+    <section id="mission" class="py-32 px-6 bg-zinc-950 border-b border-zinc-900">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="heading-font text-6xl mb-8 uppercase tracking-tight">Our <span class="text-red-600">Mission</span></h2>
+            <div class="space-y-6 text-lg text-zinc-400 leading-relaxed">
+                <p>The <strong class="text-white">Bay Area Cyber Spartans</strong> is a community-driven movement dedicated to peak physical performance. We provide the opportunity to train with a team that pushes you to your absolute limits.</p>
+                <p>From the annual <span class="text-white italic">Murph Challenge</span> to local <span class="text-white italic">Spartan Races</span>, we believe that fitness is better when done together.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meetups -->
+    <section id="workouts" class="meetup-bg py-40 px-6">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="heading-font text-5xl md:text-6xl mb-12 uppercase border-l-8 border-red-600 pl-6 text-white">Weekly Meetups</h2>
+            <div class="bg-black/70 backdrop-blur-xl p-8 border border-zinc-800 rounded-sm">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-8 text-center md:text-left">
+                    <div>
+                        <h3 class="font-black text-3xl uppercase italic text-white mb-2">Morning Grind</h3>
+                        <p class="text-red-600 font-bold uppercase tracking-widest text-lg mb-1">Monday & Thursdays @ 6:30 AM</p>
+                        <p class="text-zinc-400 uppercase text-sm font-bold">Parkway Park, Santa Clara</p>
+                    </div>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Parkway+Park+Santa+Clara" target="_blank" rel="noopener noreferrer" class="px-10 py-4 bg-white text-black font-black uppercase italic hover:bg-red-600 hover:text-white transition-all text-sm tracking-widest">Open in Maps</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mascot -->
+    <section id="mascot" class="py-24 px-6 bg-zinc-950 border-t border-zinc-900">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="heading-font text-5xl md:text-6xl mb-12 uppercase border-l-8 border-red-600 pl-6 text-white">Mascot</h2>
+            <div class="bg-black/70 backdrop-blur-xl p-8 border border-zinc-800 rounded-sm">
+                <div class="flex flex-col md:flex-row items-center gap-8">
+                    <div class="w-32 h-32 shrink-0 border-2 border-red-600 p-1 rounded-full overflow-hidden">
+                        <img src="images/max.jpg" alt="Max the Mascot" class="w-full h-full object-cover rounded-full">
+                    </div>
+                    <div class="flex-grow text-center md:text-left">
+                        <h3 class="font-black text-3xl uppercase italic text-white mb-2">Max</h3>
+                        <p class="text-zinc-400 text-lg leading-relaxed mb-4">
+                            Max is our lead morale officer. When he isn't keeping the Spartans in line, he's busy exercising and chasing squirrels. 
+                            He reminds us all to keep moving—no matter the distraction.
+                        </p>
+                        <a href="mascot.html" class="text-red-600 font-black uppercase italic tracking-widest text-sm hover:text-white transition-colors">
+                            Learn more about our mascot!
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 text-center text-zinc-700 border-t border-zinc-900 bg-black uppercase heading-font text-xl tracking-[0.3em]">
+        Bay Area Cyber Spartans
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('side-menu');
+            const overlay = document.getElementById('menu-overlay');
+            const isOpen = menu.classList.contains('translate-x-0');
+
+            if (isOpen) {
+                menu.classList.remove('translate-x-0');
+                menu.classList.add('-translate-x-full');
+                overlay.classList.add('opacity-0', 'pointer-events-none');
+                overlay.classList.remove('opacity-100', 'pointer-events-auto');
+            } else {
+                menu.classList.remove('-translate-x-full');
+                menu.classList.add('translate-x-0');
+                overlay.classList.remove('opacity-0', 'pointer-events-none');
+                overlay.classList.add('opacity-100', 'pointer-events-auto');
+            }
+        }
+    </script>
+</body>
+</html>
